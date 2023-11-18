@@ -22,8 +22,6 @@ page++;
 fetchImages(currentQuery);
 });
 
-
-
 function fetchImages(query){
 loader.style.display='block';
 showMoreButton.style.display = 'none';
@@ -53,37 +51,24 @@ function displayImages(images) {
     imageLink.target = "_blank";
     imageLink.textContent = imageData.alt_description;
 
-    // const saveButton = document.createElement('button');
-    // saveButton.innerHTML = '<i class="far fa-bookmark"></i>'; // Outline bookmark icon
-    // saveButton.classList.add('save-button');
-    // saveButton.addEventListener('click', () => {
-    //   // Change color on save button click
-    //   saveButton.style.color = 'black';
-    //   // Add your save functionality here
-    //   console.log('Save clicked for image:', imageData.id);
-    // });
     const saveButton = document.createElement('button');
-    saveButton.innerHTML = '<i class="far fa-bookmark"></i>'; // Outline bookmark icon
+    saveButton.innerHTML = '<i class="far fa-bookmark"></i>';
     saveButton.classList.add('save-button');
     saveButton.addEventListener('click', () => {
-      // Change to filled bookmark icon and color to black on save button click
       saveButton.innerHTML = '<i class="fas fa-bookmark"></i>';
       saveButton.style.color = 'black';
-      // Add your save functionality here
       console.log('Save clicked for image:', imageData.id);
     });
 
     const favoriteButton = document.createElement('button');
     const heartIcon = document.createElement('i');
-    heartIcon.classList.add('far', 'fa-heart'); // Outline heart icon
+    heartIcon.classList.add('far', 'fa-heart'); 
     favoriteButton.classList.add('favorite-button');
     favoriteButton.appendChild(heartIcon);
     favoriteButton.addEventListener('click', () => {
-      // Change color to red on favorite button click
       heartIcon.classList.remove('far');
-      heartIcon.classList.add('fas', 'fa-heart'); // Filled heart icon
+      heartIcon.classList.add('fas', 'fa-heart');
       heartIcon.style.color = 'red';
-      // Add your favorite functionality here
       console.log('Favorite clicked for image:', imageData.id);
     });
 
