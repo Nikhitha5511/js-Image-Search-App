@@ -1,0 +1,128 @@
+header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #searchInput {
+    padding: 8px;
+    font-size: 16px;
+    width:250px;
+    border-radius:4px;
+    margin-top:20px;
+  }
+  
+  #searchButton {
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+  h1{
+    font-weight: bold;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+  } 
+  
+  .loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes example {
+    from{
+     transform:scale(0.7);
+    }
+    to{
+     transform:scale(1.1);
+ 
+    }
+    
+ }
+  h1{
+     animation-name:example;
+     animation-duration:3s;
+     animation-iteration-count:infinite;
+     animation-timing-function: ease-in-out;
+  } 
+   
+  .search-result {
+    margin-bottom: 60px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .search-result:hover img {
+    transform: scale(1.05);
+  }
+  
+  .search-result img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  .search-result a {
+    padding: 10px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .search-result:hover a {
+    background-color:rgb(229, 222, 222);
+  }
+  .showButton{
+    width:150px;
+    height:30px;
+    color:white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto; 
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; 
+  }
+
+  .save-button,
+.favorite-button {
+  margin-left: 3px;
+  margin-top:5px;
+  margin-bottom: 5px;
+  margin-right: 8px; 
+  border-radius: 3px;
+  font-size: 20px;
+  border:none;
+  background: none;
+}
